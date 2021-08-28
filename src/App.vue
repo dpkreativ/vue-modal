@@ -6,7 +6,7 @@
   >
     Open Modal
   </button>
-  <Modal v-show="isModalVisible" />
+  <Modal v-show="isModalVisible" @close="closeModal" />
 </template>
 
 <script>

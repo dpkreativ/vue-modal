@@ -1,15 +1,37 @@
 <template>
   <div
     id="modal-backdrop"
-    class="fixed inset-0 bg-opacity-20 bg-black flex justify-center items-center"
+    class="fixed inset-0 bg-opacity-20 bg-purple-800 flex justify-center items-center"
   >
-    Hello! I'm gonna be a modal
+    <div
+      id="modal"
+      class="bg-purple-50 rounded-3xl overflow-x-auto flex flex-col w-2/5 h-3/5"
+    >
+      <header
+        id="modal-header"
+        class="p-4 flex justify-between items-center border-b-2 border-white relative text-purple-900"
+      >
+        <slot name="header">Default header</slot>
+        <button
+          type="button"
+          class="w-7 p-2 bg-gray-300 rounded-full"
+          @click="close"
+        >
+          <img src="../assets/letter-x.svg" alt="close button" />
+        </button>
+      </header>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Modal",
+  methods: {
+    close() {
+      this.$emit("close");
+    },
+  },
 };
 </script>
 
