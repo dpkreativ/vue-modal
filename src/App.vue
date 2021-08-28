@@ -1,6 +1,12 @@
 <template>
-  <button class="bg-white">Open Modal</button>
-  <Modal />
+  <button
+    class="bg-white py-4 px-12 rounded-xl"
+    type="button"
+    @click="showModal"
+  >
+    Open Modal
+  </button>
+  <Modal v-show="isModalVisible" />
 </template>
 
 <script>
@@ -10,6 +16,19 @@ export default {
   name: "App",
   components: {
     Modal,
+  },
+  data() {
+    return {
+      isModalVisible: false,
+    };
+  },
+  methods: {
+    showModal() {
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
+    },
   },
 };
 </script>
