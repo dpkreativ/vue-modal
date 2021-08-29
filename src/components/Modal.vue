@@ -5,14 +5,14 @@
   >
     <div
       id="modal"
-      class="bg-purple-50 rounded-3xl overflow-x-auto flex flex-col w-2/5 h-3/5"
+      class="bg-purple-50 rounded-3xl overflow-x-auto flex flex-col justify-between w-2/5 h-3/5"
     >
       <!-- Modal Header -->
       <header
         id="modal-header"
-        class="p-4 flex justify-between items-center border-b-2 border-white relative text-purple-900"
+        class="p-4 flex justify-between items-center border-b-2 border-white text-purple-900"
       >
-        <slot name="header">Replace this</slot>
+        <slot name="header">Dummy header</slot>
         <button
           type="button"
           class="w-7 p-2 bg-gray-300 rounded-full"
@@ -28,7 +28,7 @@
       </section>
 
       <!-- Modal Footer -->
-      <footer id="modal-footer" class="px-4 py-6">
+      <footer id="modal-footer" class="px-4 py-6 border-t-2 border-white">
         <slot name="footer"></slot>
       </footer>
     </div>
