@@ -1,16 +1,16 @@
 <template>
   <div
     id="modal-backdrop"
-    class="fixed inset-0 bg-opacity-20 bg-purple-800 flex justify-center items-center"
+    class="fixed inset-0 bg-opacity-40 bg-purple-900 flex justify-center items-center"
   >
     <div
       id="modal"
-      class="bg-purple-50 rounded-3xl overflow-x-auto flex flex-col justify-between w-2/5 h-3/5"
+      class="bg-purple-50 rounded-3xl overflow-x-auto flex flex-col justify-between w-2/6 h-4/6"
     >
       <!-- Modal Header -->
       <header
         id="modal-header"
-        class="p-4 flex justify-between items-center border-b-2 border-white text-purple-900"
+        class="px-4 py-6 flex justify-between items-center border-b-2 border-white"
       >
         <slot name="header">Dummy header</slot>
         <button
